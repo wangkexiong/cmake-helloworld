@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "configurePresets": [
+    {
+      "name": "x64-mingw-dynamic",
+      "inherits": "default",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+        "CMAKE_C_COMPILER": "/usr/bin/x86_64-w64-mingw32-gcc",
+        "CMAKE_CXX_COMPILER": "/usr/bin/x86_64-w64-mingw32-g++",
+        "CMAKE_SYSTEM_NAME": "Windows"
+      }
+    },
+    {
+      "name": "x64-linux-dynamic",
+      "inherits": "default",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux-dynamic",
+        "CMAKE_BUILD_RPATH": "$ORIGIN"
+      }
+    }
+  ]
+}
